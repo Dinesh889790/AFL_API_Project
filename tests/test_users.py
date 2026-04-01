@@ -14,7 +14,7 @@ class TestUsers:
     # --- Login APIs ---
     def test_api_7_verify_login_valid(self):
         # Using a known existing user for valid login test (or create one in setup)
-        response = self.api.verify_login("dinesh@test.com", "test")
+        response = self.api.verify_login("dinesh8897@gmail.com", "Ange949161@")
         # Note: 'test@test.com' is often available on this site, if it fails, replace with a known created user.
         assert response.json()["responseCode"] == 200
 
