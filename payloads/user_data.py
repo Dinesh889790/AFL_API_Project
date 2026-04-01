@@ -27,7 +27,7 @@ def get_user_payload(email, password="Password123!"):
 def data_driven():
     # List of tuples format: (email, password, expected_status)
     return [
-        ("valid_user@test.com", "password123", 200),    # Positive Case
+        ("dinesh8897@gmail.com", "Ange949161@", 200),    # Positive Case
         ("invalid_user@test.com", "wrong_pass", 404),   # Negative Case
         ("", "any_pass", 400),                          # Empty Email Case
         ("user@test.com", "", 400)                      # Empty Password Case

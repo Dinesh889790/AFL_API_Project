@@ -18,6 +18,7 @@ class TestUsers:
         # Note: 'test@test.com' is often available on this site, if it fails, replace with a known created user.
         assert response.json()["responseCode"] == 200
 
+
     def test_api_8_verify_login_without_email(self):
         response = self.api.verify_login(password="test")
         assert response.json()["responseCode"] == 400

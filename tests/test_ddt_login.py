@@ -9,6 +9,7 @@ from payloads.user_data import data_driven
 @pytest.mark.parametrize("email,password,expected_status",data_driven())
 def test_login_api_ddt(email,password,expected_status):
     api = UsersAPI()
-
     response = api.verify_login(email=email,password=password)
-    assert response.status_code == expected_status
+
+    actual_code = response.json().get("responseCode")
+    assert actual_code == expected_status
